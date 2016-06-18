@@ -2,15 +2,14 @@
 
 /**
  * @ngdoc function
- * @name recettesFamilleApp.controller:MainCtrl
+ * @name recettesFamilleApp.controller:FavorisCtrl
  * @description
- * # MainCtrl
- * Controller of the recettesFamilleApp
+ * Controller for the favorite items
  */
 angular.module('recettesFamilleApp')
-  .controller('AccueilCtrl', function () {
-    // On affiche ici les 6 dernières recettes dans des jumbotrons
-    // D'abord on prend les six dernières entrée dans la base mongoDB
+  .controller('FavorisCtrl', function () {
+    // Affiche les recettes mises en favoris si l'utilisateur est bien co
+    // besoin de 3 functions : isCo() et isEmpty() getFavoris()
     this.recettes = [
         {
             'id' : 6,
@@ -22,3 +21,4 @@ angular.module('recettesFamilleApp')
         }
     ];
   });
+

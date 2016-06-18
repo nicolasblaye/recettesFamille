@@ -21,7 +21,7 @@ angular
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
+        controller: 'AccueilCtrl',
         controllerAs: 'main'
       })
       .when('/about', {
@@ -29,7 +29,17 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
+      .when('/favoris', {
+          templateUrl: 'views/favoris.html',
+          controller: 'FavorisCtrl',
+          controllerAs: 'fav'
+      })
+      .when('/search', {
+          tempalteUrl: 'views/search.html',
+          controller: 'SearchCtrl',
+          controllerAs: 'search'
+      })
       .otherwise({
-        redirectTo: '/'
+        templateUrl : '404.html'
       });
   });
